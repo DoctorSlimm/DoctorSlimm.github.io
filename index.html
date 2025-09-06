@@ -1,155 +1,247 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-gray-300 font-light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lukas | Changelog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="min-h-screen flex flex-col items-center justify-start px-4 pt-10 pb-20 space-y-6">
 
-    <!-- Profile Card -->
-    <div class="fixed top-10 left-0 right-0 z-50 flex justify-center px-4">
-      <div class="bg-zinc-900 rounded-2xl p-8 w-full max-w-2xl shadow-lg border border-gray-800 border-[0.5px] mb-8">
-        <div class="flex items-center space-x-4">
-          <img
-            src="https://huggingface.co/web360/cdn-media/resolve/main/retardio-cousins--3501.png"
-            alt="Lukas NFT Avatar"
-            class="w-16 h-16 rounded-full object-cover mr-8"
-          />
-          <div>
-            <h1 class="text-2xl font-light">Lukas</h1>
-            <span class="italic text-gray-400 font-light">
-              British American based in SF. 2x founder. love interesting people.
-            </span>
-            </p>
-            <div class="flex space-x-4 mt-2">
-              <a href="https://github.com/doctorslimm" class="text-blue-400 text-sm underline" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/lukas-korganas" class="text-blue-400 text-sm underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://cal.com/doctorslimm" class="text-blue-400 text-sm underline" target="_blank" rel="noopener noreferrer">Coffee in SF</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukas Korganas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Darker Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #666666 !important;
+        background: #666666 !important;
+        color: #ffffff !important;
+        line-height: 1.6;
+        padding: 40px 20px;
+    }
+
+    html {
+        background-color: #666666 !important;
+        background: #666666 !important;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .logo img {
+        height: 1.2em;
+        width: 1.2em;
+        border-radius: 50%;
+    }
+
+    .logo-text {
+        font-size: 24px;
+        color: #ffffff !important;
+        font-weight: 600;
+    }
+
+    .stats {
+        margin-bottom: 40px;
+    }
+
+    .stat-item {
+        font-size: 18px;
+        color: #ffffff !important;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    .tagline {
+        font-size: 20px;
+        color: #ffffff !important;
+        margin-bottom: 40px;
+        line-height: 1.5;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .link {
+        display: inline-block;
+        transition: all 0.2s ease;
+    }
+
+    .link:hover {
+        transform: translateY(-2px) scale(1.1);
+    }
+
+    .link img {
+        width: 32px;
+        height: 32px;
+        filter: brightness(0) invert(1);
+        transition: all 0.2s ease;
+    }
+
+    .link:hover img {
+        filter: brightness(0) invert(0.8);
+    }
+
+    .section {
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #ffffff !important;
+    }
+
+    .content {
+        font-size: 16px;
+        color: #ffffff !important;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .content a {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+
+    .content a:hover {
+        color: #eeeeee !important;
+    }
+
+    .projects {
+        margin-top: 40px;
+    }
+
+    .project-item {
+        background-color: #222222;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #333333;
+        transition: all 0.2s ease;
+    }
+
+    .project-item:hover {
+        background-color: #282828;
+        transform: translateY(-1px);
+    }
+
+    .project-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #ffffff;
+    }
+
+    .project-link {
+        color: #cccccc;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .project-link:hover {
+        color: #ffffff;
+    }
+
+    .footer {
+        margin-top: 80px;
+        color: #666666;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        .links {
+            flex-direction: column;
+        }
+        
+        .link {
+            text-align: center;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://github.com/doctorslimm.png" alt="Lukas Korganas">
+                <span class="logo-text">Lukas Korganas</span>
             </div>
-          </div>
         </div>
-      </div>
+
+```
+    <div class="section">
+        <div class="content">
+            My name is Lukas Korganas, on the internet I go by DoctorSlimm.
+        </div>
+
+        <div class="content">
+            I'm a Software Engineer living in San Francisco. Currently working in Advertising at <a href="http://kontext.so" target="_blank">kontext.so</a>, a company that places personalized adverts inside AI chat applications.
+        </div>
+
+        <div class="content">
+            Previously I co-founded <a href="https://uk.linkedin.com/company/mozart-ai" target="_blank">Mozart AI</a> in London, an ETL platform for data extraction from corporate reports. Sales cycle was long (Hedgefunds / Data Vendors), R&D was heavy.
+        </div>
+
+        <div class="content">
+            Before being a founder I coded up the MVP of <a href="https://www.astrosafe.co/" target="_blank">astrosafe.co</a> for a friend, and was the first engineer and OSS maintainer at <a href="http://github.com/ccxt" target="_blank">github.com/ccxt</a>.
+        </div>
+
+        <div class="content">
+            I graduated LSE in 2021 where I studied Statistics, Finance, and Econometrics. With my final project being about Bayesian Modelling of Starbucks Reward Coupons.
+        </div>
+
+        <div class="content">
+            Recently I am becoming more interested in software that touches <em>real verticals</em>, such as laundromats, CNC machines, farms, robots, or EV chargers.
+        </div>
     </div>
 
-    <!-- Spacer-->
-    <div class="h-[180px]" display="none">ok</div>
-
-    <!-- Changelog Cards -->
-    <div class="w-full max-w-2xl space-y-4">
-      <a href="https://kontext.so" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="http://github.com/kontextso.png" alt="kontext.so" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium">(remote) kontext.so</h2>
-          </div>
-          <span class="text-gray-400 text-sm">Current</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">
-          Ads in chatbots. Single handedly managed over a dozen technical customer integrations end to end.
-        </p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <!-- <span class="px-2 py-0.5 rounded bg-yellow-700 text-gray-300 text-xs"></span> -->
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">GenAi</span>
-          <span class="px-2 py-0.5 rounded bg-blue-900 text-blue-200 text-xs">AdTech</span>
-        </div>
-      </a>
-      <a href="https://ecosystem.web360.dev" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="https://huggingface.co/web360/cdn-media/resolve/main/favicon-512.png" alt="web360.dev" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium lowercase">web360.dev</h2>
-          </div>
-          <span class="text-gray-400 text-sm">2024</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">
-          Agentic personal data enrichment engine for anon/doxxed communities. Signed one of the largest blockchains in 1 month. Figuring out all social profiles from a gamertag.
-        </p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-0.5 rounded bg-yellow-700 text-gray-300 text-xs">Founder</span>
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">Agentic search</span>
-          <span class="px-2 py-0.5 rounded bg-purple-900 text-purple-200 text-xs">Data enrichment</span>
-        </div>
-      </a>
-      <a href="https://usemozart.com" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="https://www.github.com/mozart-ai.png" alt="usemozart.com" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium lowercase">usemozart.com</h2>
-          </div>
-          <span class="text-gray-400 text-sm">2023-2024</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">ESG report data extraction pipelines. Managed Data labelling teams and fine tuning / inference stacks.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-0.5 rounded bg-yellow-700 text-gray-300 text-xs">Co-Founder</span>
-          <span class="px-2 py-0.5 rounded bg-pink-900 text-pink-200 text-xs">Computer vision</span>
-          <span class="px-2 py-0.5 rounded bg-blue-900 text-blue-200 text-xs">B2B Sales</span>
-        </div>
-      </a>
-      <a href="https://astrosafe.co" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="https://huggingface.co/web360/cdn-media/resolve/main/astrosafe.png" alt="astrosafe.co" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium lowercase">astrosafe.co</h2>
-          </div>
-          <span class="text-gray-400 text-sm">2023</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">Cloud-based classroom for iOS. Pre-installed on over 10 000 prefab school devices today.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">London</span>
-          <span class="px-2 py-0.5 rounded bg-yellow-900 text-yellow-200 text-xs">Design</span>
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">iOS/Cloud</span>
-        </div>
-      </a>
-      <a href="https://github.com/ccxt/ccxt" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="https://www.github.com/ccxt.png" alt="ccxt" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium lowercase">github.com/ccxt</h2>
-          </div>
-          <span class="text-gray-400 text-sm">2021-2023</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">1st eng on the biggest crypto SDK. Went to F1 with ByBit.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">London</span>
-          <span class="px-2 py-0.5 rounded bg-green-900 text-green-200 text-xs">OSS / DevRel</span>
-        </div>
-      </a>
-      <a href="https://www.lse.ac.uk" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="https://huggingface.co/web360/cdn-media/resolve/main/LSE_Logo.svg.png" alt="lse.ac.uk" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium lowercase">lse.ac.uk</h2>
-          </div>
-          <span class="text-gray-400 text-sm">2017-2020</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">
-          Proved my high school teachers wrong. 
-        </p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">London</span>
-          <span class="px-2 py-0.5 rounded bg-blue-900 text-blue-200 text-xs">Bayesian statistics</span>
-        </div>
-      </a>
-      <a href="https://www.latymer-upper.org" class="block bg-zinc-800 rounded-xl p-6 transition-colors hover:bg-zinc-700 cursor-pointer border border-gray-800 border-[0.5px]" target="_blank" rel="noopener noreferrer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <img src="https://huggingface.co/web360/cdn-media/resolve/main/latymer-favicon.png" alt="skateboarding" class="w-6 h-6 rounded" />
-            <h2 class="text-base font-medium lowercase">latymer-upper.org</h2>
-          </div>
-          <span class="text-gray-400 text-sm">2010-2017</span>
-        </div>
-        <p class="text-sm text-gray-300 mt-2">
-          Teachers said I was bad at math.
-        </p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-0.5 rounded bg-gray-700 text-gray-300 text-xs">London</span>
-          <span class="px-2 py-0.5 rounded bg-red-900 text-red-200 text-xs">Physics</span>
-          <span class="px-2 py-0.5 rounded bg-blue-900 text-blue-200 text-xs">Skateboarding</span>
-        </div>
-      </a>
+    <div class="links">
+        <a href="https://github.com/doctorslimm" class="link" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/lukas-korganas" class="link" target="_blank">
+            <img src="https://img.icons8.com/ios_filled/512/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://X.com/whysoslimm" class="link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3037/3037366.png" alt="Twitter">
+        </a>
+        <a href="https://cal.com/doctorslimm" class="link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3037/3037366.png" alt="Let's chat">
+        </a>
     </div>
 
-  </body>
+    <div class="footer">
+        © 2025 Lukas Korganas
+    </div>
+</div>
+```
+
+</body>
 </html>
